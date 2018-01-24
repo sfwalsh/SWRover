@@ -14,6 +14,12 @@ struct RoverPosition {
     let location: CGPoint
     let orientation: RoverOrientation
     
+    init(location: CGPoint,
+         orientation: RoverOrientation) {
+        self.location = location
+        self.orientation = orientation
+    }
+    
     init?(with representation: Any?) {
         guard let representation = representation as? [String: Any] else {
             return nil
@@ -28,17 +34,19 @@ struct RoverPosition {
         self.orientation = orientation
     }
     
+    func nextPosition(fromCommand command: RoverCommand) -> RoverPosition {
+        let nextLocation = CGPoint(x: orientation.newX(fromCommand: command, forX: Int(self.location.x)),
+                                   y: orientation.newY(fromCommand: command, forY: Int(self.location.y)))
+        let nextOrientation = orientation.newOrientation(fromCommand: command)
+        return RoverPosition(location: nextLocation, orientation: nextOrientation)
+    }
+    
     private static func fetchLocation(from representation: [String: Any]) -> CGPoint? {
-        guard let xString = representation["x"] as? String,
-            let yString = representation["y"] as? String else {
+        guard let x = representation["x"] as? Int,
+            let y = representation["y"] as? Int else {
             return nil
         }
-        
-        guard let x = NumberFormatter().number(from: xString)?.doubleValue,
-            let y = NumberFormatter().number(from: yString)?.doubleValue else {
-                return nil
-        }
-        
+    
         return CGPoint(x: x, y: y)
     }
 }

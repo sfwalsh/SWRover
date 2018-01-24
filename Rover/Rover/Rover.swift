@@ -30,21 +30,18 @@ class Rover: NSObject {
     }
     
     func executeCommands() -> CGPoint {
-        return CGPoint.zero
+        let endPosition = commands.reduce(startPosition) { (nextResult: RoverPosition, nextCommand: RoverCommand) -> RoverPosition in
+            return nextResult.nextPosition(fromCommand: nextCommand)
+        }
+        return endPosition.location
     }
     
     private class func fetchGridSize(from representation: Any?) -> CGSize? {
         guard let representation = representation as? [String: Any],
-            let xString = representation["x"] as? String,
-            let yString = representation["y"] as? String else {
+            let x = representation["width"] as? Int,
+            let y = representation["height"] as? Int else {
                 return nil
         }
-        
-        guard let x = NumberFormatter().number(from: xString)?.doubleValue,
-            let y = NumberFormatter().number(from: yString)?.doubleValue else {
-                return nil
-        }
-        
         return CGSize(width: x, height: y)
     }
 }
