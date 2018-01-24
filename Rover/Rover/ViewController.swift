@@ -9,17 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let dummyDict: [String : Any] = ["grid_size": ["width": 10, "height": 10],
+                                     "rover_start_point": ["x": 5, "y": 7, "facing": "N"],
+                                     "commands": ["right","advance","left","left","advance","advance","advance","right","advance"]]
+    var rover: Rover?
+    
+    @IBOutlet weak var roverPositionLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.rover = Rover(with: dummyDict)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func didTapExecuteButton(sender: Any?) {
+        if let rover = self.rover {
+            let output = rover.executeCommands()
+            print("\(output)")
+            roverPositionLabel.text = "\(output)"
+        }
     }
-
-
 }
 
