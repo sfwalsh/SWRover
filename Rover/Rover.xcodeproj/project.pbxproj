@@ -12,6 +12,10 @@
 		C6DE8DB420187CFA0070AE12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DE8DB220187CFA0070AE12 /* Main.storyboard */; };
 		C6DE8DB620187CFA0070AE12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6DE8DB520187CFA0070AE12 /* Assets.xcassets */; };
 		C6DE8DB920187CFA0070AE12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DE8DB720187CFA0070AE12 /* LaunchScreen.storyboard */; };
+		C6DE8DC120187DF20070AE12 /* RoverCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE8DC020187DF20070AE12 /* RoverCommand.swift */; };
+		C6DE8DC320187E580070AE12 /* RoverPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE8DC220187E580070AE12 /* RoverPosition.swift */; };
+		C6DE8DC520187E780070AE12 /* RoverOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE8DC420187E780070AE12 /* RoverOrientation.swift */; };
+		C6DE8DC720187EE60070AE12 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE8DC620187EE60070AE12 /* Rover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		C6DE8DB520187CFA0070AE12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6DE8DB820187CFA0070AE12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6DE8DBA20187CFA0070AE12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6DE8DC020187DF20070AE12 /* RoverCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverCommand.swift; sourceTree = "<group>"; };
+		C6DE8DC220187E580070AE12 /* RoverPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverPosition.swift; sourceTree = "<group>"; };
+		C6DE8DC420187E780070AE12 /* RoverOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverOrientation.swift; sourceTree = "<group>"; };
+		C6DE8DC620187EE60070AE12 /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				C6DE8DAE20187CFA0070AE12 /* AppDelegate.swift */,
+				C6DE8DC020187DF20070AE12 /* RoverCommand.swift */,
+				C6DE8DC220187E580070AE12 /* RoverPosition.swift */,
+				C6DE8DC420187E780070AE12 /* RoverOrientation.swift */,
+				C6DE8DC620187EE60070AE12 /* Rover.swift */,
 				C6DE8DB020187CFA0070AE12 /* ViewController.swift */,
 				C6DE8DB220187CFA0070AE12 /* Main.storyboard */,
 				C6DE8DB520187CFA0070AE12 /* Assets.xcassets */,
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DE8DC120187DF20070AE12 /* RoverCommand.swift in Sources */,
+				C6DE8DC320187E580070AE12 /* RoverPosition.swift in Sources */,
+				C6DE8DC720187EE60070AE12 /* Rover.swift in Sources */,
 				C6DE8DB120187CFA0070AE12 /* ViewController.swift in Sources */,
 				C6DE8DAF20187CFA0070AE12 /* AppDelegate.swift in Sources */,
+				C6DE8DC520187E780070AE12 /* RoverOrientation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
