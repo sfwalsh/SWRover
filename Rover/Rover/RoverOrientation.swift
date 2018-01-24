@@ -35,24 +35,7 @@ enum RoverOrientation: String {
             case .west:
                 return x-1
             }
-        case .left:
-            switch self {
-            case .north:
-                return x-1
-            case .south:
-                return x+1
-            case .east, .west:
-                return x
-            }
-        case .right:
-            switch self {
-            case .north:
-                return x+1
-            case .south:
-                return x-1
-            case .east, .west:
-                return x
-            }
+        default: return x
         }
     }
     
@@ -68,24 +51,7 @@ enum RoverOrientation: String {
             case .east, .west:
                 return y
             }
-        case .left:
-            switch self {
-            case .north, .south:
-                return y
-            case .east:
-                return y-1
-            case .west:
-                return y+1
-            }
-        case .right:
-            switch self {
-            case .north, .south:
-                return y
-            case .east:
-                return y+1
-            case .west:
-                return y-1
-            }
+        default: return y
         }
     }
     
