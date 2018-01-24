@@ -63,10 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				C6DE8DAE20187CFA0070AE12 /* AppDelegate.swift */,
-				C6DE8DC020187DF20070AE12 /* RoverCommand.swift */,
-				C6DE8DC220187E580070AE12 /* RoverPosition.swift */,
-				C6DE8DC420187E780070AE12 /* RoverOrientation.swift */,
-				C6DE8DC620187EE60070AE12 /* Rover.swift */,
+				C6DE8DC820188F9D0070AE12 /* Models */,
 				C6DE8DB020187CFA0070AE12 /* ViewController.swift */,
 				C6DE8DB220187CFA0070AE12 /* Main.storyboard */,
 				C6DE8DB520187CFA0070AE12 /* Assets.xcassets */,
@@ -74,6 +71,17 @@
 				C6DE8DBA20187CFA0070AE12 /* Info.plist */,
 			);
 			path = Rover;
+			sourceTree = "<group>";
+		};
+		C6DE8DC820188F9D0070AE12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6DE8DC020187DF20070AE12 /* RoverCommand.swift */,
+				C6DE8DC220187E580070AE12 /* RoverPosition.swift */,
+				C6DE8DC420187E780070AE12 /* RoverOrientation.swift */,
+				C6DE8DC620187EE60070AE12 /* Rover.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
