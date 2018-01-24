@@ -31,9 +31,17 @@ class Rover: NSObject {
     
     func executeCommands() -> CGPoint {
         let endPosition = commands.reduce(startPosition) { (nextResult: RoverPosition, nextCommand: RoverCommand) -> RoverPosition in
-            return nextResult.nextPosition(fromCommand: nextCommand)
+            
+            let nextPosition = nextResult.nextPosition(fromCommand: nextCommand)
+            return nextPosition
         }
         return endPosition.location
+    }
+    
+    func clampValue(value: CGFloat, min: CGFloat, max: CGFloat, fallbackValue: CGFloat) -> CGFloat {
+        
+        // MARK: Implement grid checking
+        return value <= max && value >= min ? value : fallbackValue
     }
     
     private class func fetchGridSize(from representation: Any?) -> CGSize? {
